@@ -1,0 +1,512 @@
+:root{
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    /* --Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%); */
+}
+
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+html{
+	width: 100%;
+}
+
+.imageAvatar{
+    width: 3rem;
+    height: 3rem;
+}
+
+main{
+    display: flex;
+}
+
+.sneakerCompany{
+    color: var(--Orange);
+    font-weight: 700;
+}
+
+h1{
+    font-weight: 700 !important;
+}
+
+.description{
+    color: var(--Dark-grayish-blue)
+}
+
+.currentPrice{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.salePercentage{
+    color: var(--Orange);
+    background-color: var(--Pale-orange);
+    width: 3rem;
+    height: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oldPrice{
+    color: var(--Grayish-blue);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.containerQuantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+    height: auto;
+    background-color: var(--Light-grayish-blue);
+    border-radius: 0.5rem;
+}
+
+.buttonMinus, .buttonPlus{
+    color: var(--Orange);
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.addToCart{
+    background-color: var(--Orange);
+    color: white;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+/* CART */
+.iconCart:hover{
+    cursor: pointer;
+}
+
+.cartInfo{
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 5px 5px;
+    text-align: center;
+}
+
+.cartInfoTop{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+
+}
+
+.emptyCartDiv{
+    color: var(--Dark-grayish-blue);
+    font-weight: 800;
+}
+
+.cartWord{
+    font-weight: 800;
+    font-size: 1rem
+}
+
+.cartInfoImage{
+    height: 5rem;
+    width: 5rem;
+    
+}
+
+.productInfo{
+    font-size: 1.2rem;
+    color: var(--Dark-grayish-blue);
+    padding-left: 1rem;
+    padding-top: 0rem;
+}
+
+.buttonCheckout{
+    background-color: var(--Orange);
+    color: white;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.iconDelete{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.notification{
+    visibility: hidden;
+    position: absolute;
+    right: 6.5rem;
+    background-color: var(--Orange);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.hidden{
+    visibility: hidden;
+    position: absolute;
+}
+
+.visible{
+    visibility: visible;
+    /* position: relative; */
+}
+
+
+
+/* MOBILE VIEW */
+@media screen and (max-width: 1200px){
+    .container-fluid{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+
+
+	.navbar-collapse {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        width: 50%;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+	.navbar-nav{
+        background-color: #ffffff;
+        height: 100vh;
+        padding-left: 2rem;
+      }
+
+      .navbar-toggler{
+        z-index: 999;
+      }
+
+    .imageAvatar{
+        margin-left: 2rem;
+    }
+
+    main{
+        flex-direction: column;
+        
+    }
+
+    .cartInfo{
+        width: 100%;
+        
+    }
+
+    .containerImages{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .containerText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sneakerCompany{
+        margin-top: 2rem;
+    }
+
+	.imageMain{
+		width: 30rem;
+		height: 30rem;
+        border-radius: 1rem;
+	}
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .salePercentage{
+        margin-left: 1rem;
+        margin-right: 5rem;
+    }
+
+
+    .containerShopping{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerQuantity{
+        width: 20rem;
+    }
+
+    .addToCart{
+        width: 20rem;
+    }
+
+    .lightBox{
+        display: none;
+    }
+
+    .mobileStepNext, .mobileStepPrevious{
+        position: absolute;
+        
+        border: none;
+        width: 3rem;
+        height:3rem;
+        border-radius: 2rem;
+        background-color: white;
+    }
+
+    .mobileStepNext{
+        left: 0rem;
+        bottom: 35rem;
+    }
+
+    .mobileStepPrevious{
+        right: 0rem;
+        bottom: 35rem;
+    }
+
+   
+
+}
+
+
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 1200px){
+    .imageAvatar{
+        margin-left: 3rem;
+    }
+
+    main{
+        flex-direction: row;
+        padding: 2rem 8rem 2rem 2rem;
+    }
+    .containerImages{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 50rem;
+        height: 50rem;
+        padding: 2rem;
+    }
+    
+    .cartInfo{
+        margin-left: 70%;
+    }
+
+    .imageMain{
+        grid-area: 1/1/5/6;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .thumbnail{
+        width: 10rem;
+        margin-top: 2rem;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .thumbnail:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        
+    }
+
+    .thumbnail.active{
+        border: 5px solid var(--Orange)
+    }
+
+      
+    .imageThumbnail1{
+
+        grid-area: 5/1/6/2;
+    }
+
+    .imageThumbnail2{
+        grid-area: 5/2/6/3;
+        margin-left: 1rem;
+    }
+
+    .imageThumbnail3{
+        grid-area: 5/3/6/4;
+        margin-left: 1rem;
+    }
+
+    .imageThumbnail4{
+        grid-area: 5/4/6/5;
+        margin-left: 1rem;
+    }
+
+    .containerText{
+        margin-top: 6rem;
+    }
+
+    .pricing{
+        display: grid;
+        grid-template-columns: 8rem 2rem;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .salePercentage{
+        margin-top: 0.5rem;
+    }
+
+    .containerShopping{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .addToCart{
+        width: 15rem;
+    }
+
+    .mobileStepNext{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .mobileStepPrevious{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /* LIGHTBOX */
+
+    .lightBox{
+        visibility: hidden;
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: rgba(0,0,0,0.9);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 10rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    .containerLightBoxImageMain{
+        grid-area: 2/2/7/6;
+        border-radius: 2rem;
+    }
+
+    .lightBoxImageMain{
+        width: 100%;
+        height: 105%;
+        object-fit: contain;
+        border-radius: 2rem;
+    }
+
+    .closeButton{
+        position: relative;
+        left: 19.5rem;
+        bottom: 35rem;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+
+    .stepPrevious{
+        position: relative;
+        right: 17rem;
+        bottom: 20rem;
+        border: none;
+        width: 4rem;
+        height:4rem;
+        border-radius: 2rem;
+        background-color: white;
+    }
+
+
+    .stepNext{
+        position: relative;
+        left: 15rem;
+        bottom: 20rem;
+        border: none;
+        width: 4rem;
+        height:4rem;
+        border-radius: 2rem;
+        background-color: white;
+    }
+
+    .lightBoxThumbnail{
+        width: 10rem;
+        margin-top: 2rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 2rem;
+        margin-left: 1.5rem;
+    }
+    
+    .lightBoxThumbnail1{
+        grid-area: 7/2/8/3;
+        
+    }
+
+    .lightBoxThumbnail2{
+        grid-area: 7/3/8/4;
+    }
+
+    .lightBoxThumbnail3{
+        grid-area: 7/4/8/5;
+    }
+
+    .lightBoxThumbnail4{
+        grid-area: 7/5/8/6;
+    }
+
+    .lightBoxThumbnail:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        
+    }
+
+    .lightBoxThumbnail.active{
+        border: 5px solid var(--Orange)
+    }
+
+}
